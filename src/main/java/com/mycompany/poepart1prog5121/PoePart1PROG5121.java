@@ -43,7 +43,7 @@ public class PoePart1PROG5121 {
     
         
     public String registerUser(String userName, String passWord, String cellPhone, String firstName, String lastName){
-        if (checkUserName(userName)){
+        if (!checkUserName(userName)){
             return "Username is not correctly formatted,Please ensure that your username contains an underscore and is no more than five characters in lenght.";
             
         }
@@ -63,7 +63,7 @@ public class PoePart1PROG5121 {
     
         
     public boolean loginUser(String userName, String passWord ){
-        if (this.userName == userName && this.passWord == passWord){
+        if(this.userName.equals(userName) && this.passWord.equals(passWord)){
            // System.out.println();
             return true;
         }else{
@@ -111,7 +111,7 @@ public class PoePart1PROG5121 {
 
                 break;
             }else { 
-                System.out.println("The password must be at least 8 characters, Try again.");
+                System.out.println("The password is not correctly formatted;please ensure that the password contains at least eight characters,a capital letter,a number and a special character, Try again.");
             }
         }
 
@@ -131,8 +131,8 @@ public class PoePart1PROG5121 {
 
             
         
-        //login 
-        if (massage.equals("User registerd successfully")){
+         
+        if (massage.equals("User registered successfully.")){
 
             System.out.println("Login");
 
@@ -145,7 +145,10 @@ public class PoePart1PROG5121 {
                 String loginUserPass = input.nextLine();
 
                 if (login.loginUser(loginUserName, loginUserPass)){
-                 //   System.out.println("Welcome " + firstName + );
+                    System.out.println("Welcome " + firstName + " " + lastName + ",it is great to see you again" );
+                    break;
+                }else{
+                    System.out.println("Username or password incorrect,please try again.");
                 }
             }
         }   
