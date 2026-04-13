@@ -41,6 +41,27 @@ public class PoePart1PROG5121 {
     }
     
     
+        
+    public String registerUser(String userName, String passWord, String cellPhone, String firstName, String lastName){
+        if (checkUserName(userName)){
+            return "Username is not correctly formatted,Please ensure that your username contains an underscore and is no more than five characters in lenght.";
+            
+        }
+        
+        if (!checkCellPhoneNumber(cellPhone)){
+            return "Cell phone number incorrectly formatted.";
+        }
+        
+        this.userName = userName;
+        this.passWord = passWord;
+        this.cellPhone = cellPhone;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        
+        return "User registered successfully.";
+    }
+    
+    
     public static void main(String[] args) {
         
     }
