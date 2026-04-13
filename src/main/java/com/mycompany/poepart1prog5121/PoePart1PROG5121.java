@@ -30,6 +30,23 @@ public class PoePart1PROG5121 {
         }
     }
     
+    public boolean checkPasswordComplexity(String password) {
+    boolean hasUpper = false;
+    boolean hasNumber = false;
+    boolean hasSpecial = false;
+
+    for (char c : password.toCharArray()) {
+        if (Character.isUpperCase(c)) {
+            hasUpper = true;
+        } else if (Character.isDigit(c)) {
+            hasNumber = true;
+        } else if (!Character.isLetterOrDigit(c)) {
+            hasSpecial = true;
+        }
+    }
+
+    return password.length() >= 8 && hasUpper && hasNumber && hasSpecial;
+}
         
     public boolean checkCellPhoneNumber(String cellPhone){
         if (cellPhone.startsWith("+27") && cellPhone.length() == 12){
