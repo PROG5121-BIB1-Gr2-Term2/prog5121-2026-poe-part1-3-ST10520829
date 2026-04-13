@@ -13,7 +13,7 @@ package com.mycompany.poepart1prog5121;
 import java.util.Scanner;
 
 
-public class PoePart1PROG5121 {
+public class Login {
     
     String userName;
     String passWord;
@@ -103,7 +103,7 @@ public class PoePart1PROG5121 {
     public static void main(String[] args) {
                 
         Scanner input = new Scanner(System.in);
-        PoePart1PROG5121 login = new PoePart1PROG5121();
+        Login login = new Login();
         
         System.out.println("Welcome to the Authorisation System!");
         
@@ -171,7 +171,9 @@ public class PoePart1PROG5121 {
 
                 System.out.println("Enter passWord");
                 String loginUserPass = input.nextLine();
+               
                 System.out.println(login.returnLoginStatus(userName,passWord));
+                return;
             }
         }   
     }

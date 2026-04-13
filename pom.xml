@@ -8,6 +8,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>25</maven.compiler.release>
-        <exec.mainClass>com.mycompany.poepart1prog5121.PoePart1PROG5121</exec.mainClass>
+        <exec.mainClass>com.mycompany.poepart1prog5121.Login</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
