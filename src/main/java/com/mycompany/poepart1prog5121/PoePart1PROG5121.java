@@ -30,6 +30,16 @@ public class PoePart1PROG5121 {
         }
     }
     
+        
+    public boolean checkCellPhoneNumber(String cellPhone){
+        if (cellPhone.startsWith("+27") && cellPhone.length() == 12){
+            return true;
+        }else{
+           // System.out.println("");
+            return false;
+        }
+    }
+    
     
     public static void main(String[] args) {
         
