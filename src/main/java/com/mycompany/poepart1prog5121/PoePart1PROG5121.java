@@ -88,6 +88,13 @@ public class PoePart1PROG5121 {
         }
     }
     
+    public String returnLoginStatus(String userName, String passWord) {
+    if (loginUser(userName, passWord)) {
+        return "Welcome " + firstName + " " + lastName + ", it is great to see you again.";
+    } else {
+        return "Username or password incorrect, please try again.";
+    }
+}
                         
     public static void main(String[] args) {
                 
@@ -160,13 +167,7 @@ public class PoePart1PROG5121 {
 
                 System.out.println("Enter passWord");
                 String loginUserPass = input.nextLine();
-
-                if (login.loginUser(loginUserName, loginUserPass)){
-                    System.out.println("Welcome " + firstName + " " + lastName + ",it is great to see you again" );
-                    break;
-                }else{
-                    System.out.println("Username or password incorrect,please try again.");
-                }
+                System.out.println(login.returnLoginStatus(userName,passWord));
             }
         }   
     }
