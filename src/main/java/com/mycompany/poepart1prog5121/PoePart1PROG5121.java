@@ -65,6 +65,10 @@ public class PoePart1PROG5121 {
             
         }
         
+        if (!checkPasswordComplexity(passWord)){
+            return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.";
+        }
+        
         if (!checkCellPhoneNumber(cellPhone)){
             return "Cell phone number incorrectly formatted.";
         }
@@ -131,7 +135,7 @@ public class PoePart1PROG5121 {
             System.out.println("Please enter your password");
             passWord = input.nextLine();
 
-            if (passWord.length() >= 8) {
+            if (login.checkPasswordComplexity(passWord)) {
 
                 break;
             }else { 
