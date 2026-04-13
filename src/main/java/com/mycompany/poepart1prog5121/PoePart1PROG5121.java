@@ -61,6 +61,16 @@ public class PoePart1PROG5121 {
         return "User registered successfully.";
     }
     
+        
+    public boolean loginUser(String userName, String passWord ){
+        if (this.userName == userName && this.passWord == passWord){
+           // System.out.println();
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
     
     public static void main(String[] args) {
         
